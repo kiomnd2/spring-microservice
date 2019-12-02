@@ -5,6 +5,7 @@ import com.chapter6.book.entitiy.Inventory;
 import com.chapter6.book.entitiy.Passenger;
 import com.chapter6.book.repository.BookingRepository;
 import com.chapter6.book.repository.InventoryRepository;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,13 +17,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
+
+
 import reactor.core.publisher.Mono;
-
-
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 @Component
 public class BookingComponent {

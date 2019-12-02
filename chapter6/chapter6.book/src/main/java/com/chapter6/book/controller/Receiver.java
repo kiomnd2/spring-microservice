@@ -9,16 +9,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class Receiver {
     BookingComponent bookingComponent;
-
     @Autowired
-    public Receiver(BookingComponent bookingComponent )
-    {
+    public Receiver(BookingComponent bookingComponent){
         this.bookingComponent = bookingComponent;
     }
+
     @RabbitListener(queues = "CheckINQ")
-    public void processMessage(long bookingID)
-    {
+    public void processMessage(long bookingID ) {
+
         System.out.println(bookingID);
+
         bookingComponent.updateStatus(BookingStatus.CHECKED_IN, bookingID);
     }
 

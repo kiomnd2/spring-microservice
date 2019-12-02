@@ -20,6 +20,7 @@ public class FaresController {
         this.faresComponent = faresComponent;
     }
 
+    @RequestMapping("/get")
     Fare getFare(@RequestParam(value="flightNumber") String flightNumber, @RequestParam(value="flightDate") String flightDate )
     {
         return faresComponent.getFare(flightNumber,flightDate);
