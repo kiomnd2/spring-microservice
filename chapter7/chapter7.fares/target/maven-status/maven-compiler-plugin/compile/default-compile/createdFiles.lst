@@ -1,0 +1,5 @@
+com\chapter6\fares\component\FaresComponent.class
+com\chapter6\fares\FareApplication.class
+com\chapter6\fares\entity\Fare.class
+com\chapter6\fares\repository\FaresRepository.class
+com\chapter6\fares\controller\FaresController.class

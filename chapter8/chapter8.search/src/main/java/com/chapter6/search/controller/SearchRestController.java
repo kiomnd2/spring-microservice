@@ -2,6 +2,8 @@ package com.chapter6.search.controller;
 
 import com.chapter6.search.component.SearchComponent;
 import com.chapter6.search.entity.Flight;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -17,6 +19,7 @@ import java.util.List;
 @RequestMapping("/search")
 public class SearchRestController {
 
+    private static final Logger logger = LoggerFactory.getLogger(SearchRestController.class);
     private SearchComponent searchComponent;
 
     @Value("${originairports.shutdown}")
@@ -41,6 +44,14 @@ public class SearchRestController {
 
         return searchComponent.search(query);
     }
+
+    @RequestMapping("/hub")
+    String getHub(){
+        logger.info("Searching for hub, received from search-apigateway");
+        return "SFO";
+    }
+
+
 
 }
 

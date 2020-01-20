@@ -14,6 +14,7 @@ import java.util.Map;
 @EnableBinding(SearchSink.class)
 public class Receiver {
 
+
     SearchComponent searchComponent;
 
     /*
